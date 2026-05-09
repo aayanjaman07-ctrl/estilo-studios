@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Products - Drip Drop | Premium Clothing Brand in Chattogram</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqGaospIyvUA0XPQr3UjiPpNdgNC7cwjbpkg&s" alt="Blues & Brown Logo" class="logo-img">
+                <h1>Drip Drop</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                
+                <li><a href="contact.html">Contact</a></li>
+                <li class="cart-nav">
+                    <a href="cart.html">
+                        🛒 Cart
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="product" class="product-section">
+            <h1>Our Products</h1>
+            <div class="product-categories">
+                <div class="category shirts">
+                    <h3>Shirts</h3>
+                    <div class="product-items">
+                        <div class="product-item" onclick="openProduct(1)">
+                            <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=200&h=150&fit=crop" alt="Black Shirt">
+                            <div class="item-info">
+                                <h4>Black Shirt</h4>
+                                <span>$25</span>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=150&fit=crop" alt="Calamari Rings">
+                            <div class="item-info">
+                                <h4>Calamari Rings</h4>
+                                <span>$12</span>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://images.unsplash.com/photo-1541599468348-e96984315621?w=200&h=150&fit=crop" alt="Stuffed Mushrooms">
+                            <div class="item-info">
+                                <h4>Stuffed Mushrooms</h4>
+                                <span>$10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="category baggy-pants">
+                    <h3>Baggy Pants</h3>
+                    <div class="product-items">
+                        <div class="product-item" onclick="openProduct(2)">
+                            <img src="https://images.unsplash.com/photo-1541599468348-e96984315621?w=200&h=150&fit=crop" alt="Baggy Black Pants">
+                            <div class="item-info">
+                                <h4>Baggy Black Pants</h4>
+                                <span class="chef-rec">$40</span>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=200&h=150&fit=crop" alt="Tomato Basil">
+                            <div class="item-info">
+                                <h4>Tomato Basil</h4>
+                                <span>$10</span>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://images.unsplash.com/photo-1541599468348-e96984315621?w=200&h=150&fit=crop" alt="Clam Chowder">
+                            <div class="item-info">
+                                <h4>Clam Chowder</h4>
+                                <span>$12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="category polo">
+                    <h3>Polo</h3>
+                    <div class="product-items">
+                        <div class="product-item" onclick="openProduct(3)">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=150&fit=crop" alt="Classic Black Polo">
+                            <div class="item-info">
+                                <h4>Classic Black Polo</h4>
+                                <span>$30</span>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&h=150&fit=crop" alt="Meaty Feast">
+                            <div class="item-info">
+                                <h4>Meaty Feast</h4>
+                                <span>$32</span>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=200&h=150&fit=crop" alt="Vegetarian Platter">
+                            <div class="item-info">
+                                <h4>Vegetarian Platter</h4>
+                                <span>$18</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+     <footer>
+        <p>&copy; 2026 Drip Drop. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    
+    <div id="product-modal" class="modal">
+    <div class="modal-content">
+
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+
+        <div class="modal-left">
+            <img id="main-image" src="" alt="">
+
+            <div id="thumbnail-container"></div>
+        </div>
+
+        <div class="modal-right">
+            <h2 id="product-name"></h2>
+
+            <p id="product-price"></p>
+
+            <p id="product-description"></p>
+
+            <h3>Sizes</h3>
+
+            <div id="sizes"></div>
+
+            <button class="add-cart-btn"
+                    onclick="addToCart()">
+
+                Add To Cart
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- CART NOTIFICATION -->
+
+<div id="cart-toast">
+
+    ✓ Item Added To Cart
+
+</div>
+
+<!-- PREMIUM SOUND -->
+
+<audio id="cart-sound">
+
+    <source
+        src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+</body>
+</html>

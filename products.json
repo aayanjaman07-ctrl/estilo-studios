@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "name": "Black Shirt",
+    "category": "Shirts",
+    "price": 25,
+    "sizes": ["S", "M", "L", "XL"],
+    "description": "Premium oversized cotton shirt with relaxed fit.",
+    "images": [
+      "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=600",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600"
+    ]
+  },
+
+  {
+    "id": 2,
+    "name": "Baggy Black Pants",
+    "category": "Baggy Pants",
+    "price": 40,
+    "sizes": ["30", "32", "34", "36"],
+    "description": "Loose fit streetwear denim pants with premium fabric.",
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-787c3835535d?w=600",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600",
+      "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600"
+    ]
+  },
+
+  {
+    "id": 3,
+    "name": "Classic Black Polo",
+    "category": "Polo",
+    "price": 30,
+    "sizes": ["S", "M", "L"],
+    "description": "Minimal premium polo shirt for casual and smart wear.",
+    "images": [
+      "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600",
+      "https://images.unsplash.com/photo-1527719327859-c6ce80353573?w=600",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600"
+    ]
+  }
+]
