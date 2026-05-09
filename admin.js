@@ -16,8 +16,12 @@ const ordersContainer =
 
 async function loadOrders() {
 
-    const snapshot =
-        await db.collection("orders").get();
+    const ordersContainer =
+        document.getElementById("orders");
+
+    db.collection("orders")
+        .orderBy("createdAt", "desc")
+        .onSnapshot((snapshot) => {
 
     ordersContainer.innerHTML = "";
 
