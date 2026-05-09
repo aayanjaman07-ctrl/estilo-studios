@@ -14,7 +14,6 @@ const ordersContainer = document.getElementById("orders");
 function loadOrders() {
 
     db.collection("orders")
-        .orderBy("createdAt", "desc")
         .onSnapshot((snapshot) => {
 
             ordersContainer.innerHTML = "";
@@ -25,8 +24,8 @@ function loadOrders() {
 
                 let itemsHTML = "";
 
-                if (order.items && Array.isArray(order.items)) {
-                    order.items.forEach((item) => {
+                if (order.items) {
+                    order.items.forEach(item => {
                         itemsHTML += `
                             <div class="item">
                                 ${item.name} | Size: ${item.size} | Qty: ${item.quantity}
@@ -35,32 +34,19 @@ function loadOrders() {
                     });
                 }
 
-                const status = order.status || "pending";
-
                 ordersContainer.innerHTML += `
                     <div class="order">
 
-                        <h3>
-                            Order ID:
-                            <span class="badge">${doc.id}</span>
-                        </h3>
+                        <h3>Order ID: ${doc.id}</h3>
 
-                        <p><b>Name:</b> ${order.name || ""}</p>
-                        <p><b>Phone:</b> ${order.phone || ""}</p>
-                        <p><b>bKash TRX ID:</b> ${order.trxId || ""}</p>
-                        <p><b>Address:</b> ${order.address || ""}</p>
-                        <p><b>Total:</b> $${order.total || 0}</p>
+                        <p>Name: ${order.name}</p>
+                        <p>Phone: ${order.phone}</p>
+                        <p>Total: $${order.total}</p>
+                        <p>Status: ${order.status || "pending"}</p>
 
-                        <p>
-                            <b>Status:</b>
-                            <span class="status ${status}">
-                                ${status}
-                            </span>
-                        </p>
+                        <div class="items">${itemsHTML}</div>
 
-                        <div class="items">
-                            ${itemsHTML}
-                        </div>
+                      </div>
 
                         <div class="status-buttons">
 
