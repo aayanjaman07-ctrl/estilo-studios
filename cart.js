@@ -60,7 +60,10 @@ function removeItem(index) {
     renderCart();
 }
 
-function openCheckout() {
+function openCheckout(event) {
+
+    if (event) {
+        event.preventDefault();
 
     document.getElementById("checkout-modal")
         .style.display = "flex";
