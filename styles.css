@@ -92,7 +92,7 @@ header, .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 2rem;
+    padding: 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -221,64 +221,138 @@ header, .navbar {
 @media (max-width: 768px) {
 
     .navbar {
-        padding: 1rem 1.2rem;
+
+        height: 72px;
+
+        padding: 0 1rem;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        left: 0;
     }
 
     .logo {
+
         display: flex;
+
         align-items: center;
+
         gap: 10px;
+
+        height: 100%;
     }
 
     .logo-img {
-        height: 35px;
-        max-width: 40px;
+
+        height: 60px;
+
+        width: auto;
+
+        max-width: 80;
+
+        display: block;
+
+        object-fit: contain;
     }
-    
+
+    .logo h1 {
+
+        font-size: 1.25rem;
+
+        line-height: 1.1;
+
+        margin: 0;
+    }
+
     .hamburger {
+
         display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 5px;
+
+        z-index: 10001;
     }
 
     .nav-links {
+
         position: fixed;
-        top: 80px;
-        right: 0;
+
+        top: 72px;
+
+        left: 0;
+
         width: 100%;
-        background: rgba(0,0,0,0.92);
+
+        background: rgba(0,0,0,0.96);
+
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
 
         display: flex;
+
         flex-direction: column;
+
         justify-content: center;
+
         align-items: center;
+
         gap: 1.8rem;
 
         padding: 2rem 0;
 
-        transform: translateY(-120%);
+        transform: translateY(-150%);
+
         transition: transform 0.4s ease;
 
-        border-bottom: 1px solid rgba(251,191,36,0.15);
+        border-bottom:
+            1px solid rgba(251,191,36,0.15);
+
+        z-index: 10000;
     }
 
     .nav-links.active {
+
         transform: translateY(0);
     }
 
+    .nav-links li {
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+    }
+
     .nav-links a {
-        font-size: 1.2rem;
+
+        width: 100%;
+
+        text-align: center;
+
+        font-size: 1.15rem;
+
         color: white;
+
+        padding: 0.8rem 0;
     }
 
     .nav-links a:hover {
-        color: #fbbf24;
-        text-shadow: 0 0 10px rgba(251,191,36,0.5);
-    }
 
-    .logo-img {
-        height: 35px;
-        max-width: 40px;
+        color: #fbbf24;
+
+        text-shadow:
+            0 0 10px rgba(251,191,36,0.5);
     }
 }
 
