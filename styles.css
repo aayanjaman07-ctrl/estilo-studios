@@ -101,7 +101,7 @@ header, .navbar {
     backdrop-filter: blur(15px);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&display=swap');
 
 .logo {
     display: flex;
@@ -120,33 +120,35 @@ header, .navbar {
     filter: drop-shadow(0 2px 8px rgba(251, 191, 36, 0.3));
 }
 
-.logo h1{
+.brand-logo{
     margin: 0;
     display: flex;
     align-items: center;
+    background: black;
 }
 
-.bold{
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
+.estilo{
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
     color: white;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
+    line-height: 1;
 }
 
-.script{
+.studios{
     font-family: 'Great Vibes', cursive;
-    font-size: 2.2rem;
+    font-size: 3.4rem;
     color: white;
-    margin-left: -5px;
+    margin-left: -12px;
     position: relative;
+    top: 6px;
+    font-weight: 400;
 }
 
 .registered{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     position: relative;
-    color: #fbbf24;
-    top: -18px;
+    top: -28px;
     left: 2px;
 }
 
