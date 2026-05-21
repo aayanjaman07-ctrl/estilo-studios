@@ -126,6 +126,7 @@ header {
     object-fit: contain;
     filter: drop-shadow(0 2px 8px rgba(251, 191, 36, 0.3));
     flex-shrink: 0;
+    margin-left: 10px;
 }
 
 .brand-logo{
@@ -257,7 +258,7 @@ header {
 
         width: auto;
 
-        max-width: 80;
+        max-width: 80px;
 
         display: block;
 
